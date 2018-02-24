@@ -64,24 +64,6 @@ namespace database_app
 
             */
 
-
-
-            /*
-
-
-
-            for (int i = 0; i < fileArray.Length; i++)
-            {
-                    //Write a line of text
-                    sw.WriteLine(fileArray[i]);
-
-            }
-
-            //Close the file
-            sw.Close();
-
-            */
-
             foreach (string value in fileArray)
             {
 
@@ -118,51 +100,6 @@ namespace database_app
 
             //Close the file
             sw.Close();
-
-
-
-            /*
-
-
-            foreach (string value in fileArray)
-            {
-
-                byte[] b = new byte[128];
-                string sArtist;
-                string sTitle;
-                
-                FileStream fs = new FileStream(value, FileMode.Open);
-                fs.Seek(-128, SeekOrigin.End);
-                fs.Read(b, 0, 128);
-                bool isSet = false;
-                String sFlag = System.Text.Encoding.Default.GetString(b, 0, 3);
-                if (sFlag.CompareTo("TAG") == 0)
-                {
-
-                    isSet = true;
-                }
-
-                if (isSet)
-                {
-                    //get   artist and title and write a line of text 
-                    sArtist = System.Text.Encoding.Default.GetString(b, 33, 30);
-                    sTitle = System.Text.Encoding.Default.GetString(b, 3, 30);
-
-                    sw.WriteLine(sArtist + "," + sTitle);
-
-                }
-
-
-
-
-            }
-
-
-
-
-
-            */
-
 
 
 
@@ -218,57 +155,6 @@ namespace database_app
 
 
             conn.Close();
-
-
-
-            /*
-
-
-
-
-            string[] fields = new string[lineCount];
-
-
-
-            foreach (string value in fields)
-            {
-
-
-
-                for (int i = 0; i < lineCount; i++)
-            {
-
-
-                if ((line = file.ReadLine()) != null)
-                {
-                    fields = line.Split(',');
-
-                }
-
-                System.Console.WriteLine(value);
-
-                }
-
-
-            }
-
-            System.Console.ReadLine();
-
-            */
-
-
-            // cmd.CommandText = "insert into ultimate_playlist (artist, title) values (?fields[0], ?fields[1])";
-
-
-
-            // cmd.Parameters.AddWithValue("?artist", fields[0]);
-            // cmd.Parameters.AddWithValue("?title", fields[1]);
-
-
-
-
-            // cmd.CommandText = db.ultimate_playlist.insert("ID", "artist", "title").values(i, fields[0], fields[1]);
-            // cmd.ExecuteNonQuery();
 
 
         }
